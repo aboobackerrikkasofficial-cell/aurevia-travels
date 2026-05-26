@@ -166,7 +166,7 @@ export default function Home() {
       />
 
       {/* 1. HERO SECTION */}
-      <section ref={heroRef} className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+      <section ref={heroRef} className="relative min-h-screen lg:h-screen w-full overflow-hidden flex items-center justify-center py-28 lg:py-0">
         {/* Parallax Container */}
         <m.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0 w-full h-full">
           {/* Animated Background Images */}
@@ -470,7 +470,7 @@ export default function Home() {
           </div>
           
           <div className="lg:col-span-7 grid grid-cols-12 gap-4 relative">
-            <div className="col-span-8 rounded-3xl overflow-hidden h-[350px] border border-white/5">
+            <div className="col-span-8 rounded-3xl overflow-hidden h-[180px] sm:h-[350px] border border-white/5">
               <LuxuryImage
                 src="/images/private_jet.png"
                 alt="Private Jet Experience"
@@ -478,7 +478,7 @@ export default function Home() {
                 aspectRatio="none"
               />
             </div>
-            <div className="col-span-4 rounded-3xl overflow-hidden h-[250px] mt-auto border border-white/5">
+            <div className="col-span-4 rounded-3xl overflow-hidden h-[130px] sm:h-[250px] mt-auto border border-white/5">
               <LuxuryImage
                 src="/images/yacht.png"
                 alt="Yacht Experience"
@@ -486,7 +486,7 @@ export default function Home() {
                 aspectRatio="none"
               />
             </div>
-            <div className="col-span-4 rounded-3xl overflow-hidden h-[200px] border border-white/5">
+            <div className="col-span-4 rounded-3xl overflow-hidden h-[110px] sm:h-[200px] border border-white/5">
               <LuxuryImage
                 src="/images/helicopter.png"
                 alt="Helicopter Experience"
@@ -494,7 +494,7 @@ export default function Home() {
                 aspectRatio="none"
               />
             </div>
-            <div className="col-span-8 rounded-3xl overflow-hidden h-[300px] -mt-12 border border-white/5">
+            <div className="col-span-8 rounded-3xl overflow-hidden h-[150px] sm:h-[300px] mt-0 sm:-mt-12 border border-white/5">
               <LuxuryImage
                 src="/images/paris.png"
                 alt="Paris Street"

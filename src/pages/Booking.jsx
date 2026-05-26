@@ -644,9 +644,9 @@ export default function Booking() {
 
                     {/* Saved profiles dropdown */}
                     {savedProfiles.length > 0 && (
-                      <div className="flex items-center space-x-2 shrink-0">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:space-x-2 sm:gap-0 shrink-0">
                         <span className="text-[9px] tracking-widest text-gold uppercase font-bold">Autofill Profile</span>
-                        <div className="flex gap-2">
+                        <div className="flex flex-wrap gap-2">
                           {savedProfiles.map(prof => (
                             <button
                               key={prof.id}

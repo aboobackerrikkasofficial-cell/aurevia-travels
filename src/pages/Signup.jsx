@@ -128,7 +128,7 @@ export default function Signup() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="glass-effect rounded-3xl p-8 md:p-10 border border-white/5 shadow-2xl relative"
+          className="glass-effect rounded-3xl p-6 sm:p-8 md:p-10 border border-white/5 shadow-2xl relative"
         >
           {/* Brand Logo */}
           <div className="text-center mb-8 space-y-2">
@@ -350,7 +350,7 @@ export default function Signup() {
                       value={data}
                       onChange={(e) => handleOtpChange(e.target, index)}
                       onFocus={(e) => e.target.select()}
-                      className="w-10 h-12 md:w-12 md:h-14 bg-[#0a0a0c]/60 border border-white/10 focus:border-gold rounded-xl text-center text-lg font-bold text-white outline-none tracking-normal transition-colors"
+                      className="w-8 h-10 xs:w-10 xs:h-12 md:w-12 md:h-14 bg-[#0a0a0c]/60 border border-white/10 focus:border-gold rounded-xl text-center text-lg font-bold text-white outline-none tracking-normal transition-colors"
                     />
                   ))}
                 </div>

@@ -247,7 +247,7 @@ export default function Destinations() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.96, y: 15 }}
               transition={{ type: 'spring', duration: 0.45 }}
-              className="w-full max-w-4xl glass-effect border border-white/10 rounded-3xl overflow-hidden shadow-2xl relative grid grid-cols-1 md:grid-cols-12"
+              className="w-full max-w-4xl glass-effect border border-white/10 rounded-3xl shadow-2xl relative flex flex-col md:grid md:grid-cols-12 max-h-[90vh] md:max-h-[85vh] overflow-y-auto md:overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -260,7 +260,7 @@ export default function Destinations() {
               </button>
 
               {/* Left Side: Image Banner */}
-              <div className="col-span-12 md:col-span-5 h-[240px] md:h-auto relative">
+              <div className="col-span-12 md:col-span-5 h-[200px] sm:h-[240px] md:h-full md:min-h-0 shrink-0 relative">
                 <LuxuryImage
                   src={selectedDest.image}
                   alt={selectedDest.name}
@@ -281,7 +281,7 @@ export default function Destinations() {
               </div>
 
               {/* Right Side: Editorial Info */}
-              <div className="col-span-12 md:col-span-7 p-8 md:p-12 space-y-6 md:space-y-8 flex flex-col justify-between max-h-[75vh] md:max-h-none overflow-y-auto">
+              <div className="col-span-12 md:col-span-7 p-6 sm:p-8 md:p-12 space-y-6 md:space-y-8 flex flex-col justify-between md:max-h-[85vh] md:overflow-y-auto">
                 <div className="space-y-6">
                   {/* Reviews & Badges */}
                   <div className="flex flex-wrap items-center gap-4 text-xs">
@@ -333,13 +333,13 @@ export default function Destinations() {
                 </div>
 
                 {/* Bottom Checkout details */}
-                <div className="flex items-center justify-between pt-6 border-t border-white/5">
-                  <div className="text-left">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-6 border-t border-white/5">
+                  <div className="text-left flex justify-between items-center sm:block">
                     <span className="text-[9px] tracking-[0.2em] text-text-secondary uppercase block">Est. Starting Price</span>
                     <span className="text-2xl font-light text-white tracking-tight">{selectedDest.price}</span>
                   </div>
                   
-                  <div className="flex gap-4 items-center">
+                  <div className="flex gap-4 items-center justify-between sm:justify-end w-full sm:w-auto">
                     <button
                       onClick={() => setSelectedDest(null)}
                       className="magnet-target text-xs tracking-[0.2em] uppercase text-text-secondary hover:text-white transition-colors duration-300 focus-visible:ring-1 focus-visible:ring-gold"
@@ -351,7 +351,7 @@ export default function Destinations() {
                         handleBook(selectedDest.name)
                         setSelectedDest(null)
                       }}
-                      className="magnet-target text-xs tracking-[0.2em] uppercase bg-gold hover:bg-gold-hover text-[#0a0a0c] font-semibold px-6 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-gold/10 flex items-center gap-2 focus-visible:ring-1 focus-visible:ring-gold"
+                      className="magnet-target text-xs tracking-[0.2em] uppercase bg-gold hover:bg-gold-hover text-[#0a0a0c] font-semibold px-4 sm:px-6 py-3 sm:py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-gold/10 flex items-center justify-center gap-2 focus-visible:ring-1 focus-visible:ring-gold w-full sm:w-auto"
                     >
                       Configure Journey
                       <ArrowRight size={14} />
